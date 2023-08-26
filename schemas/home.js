@@ -5,17 +5,6 @@ export default {
     title: 'Home',
     type: 'document',
     icon: HomeIcon,
-    groups: [
-        {
-            name: "seo",
-            title: "SEO",
-
-        },
-        {
-            name: "content",
-            title: "Content",
-        }
-    ],
     fields: [
         {
             name: 'seoImage',
@@ -25,7 +14,6 @@ export default {
             options: {
                 hotspot: true,
             },
-            groups: 'seo',
             //validation: Rule => Rule.required(),
         },
         {
@@ -33,7 +21,6 @@ export default {
             title: 'SEO Title',
             type: 'string',
             description: 'Title для соц. сетей',
-            groups: 'seo',
             //validation: Rule => Rule.required(),
         },
         {
@@ -41,7 +28,6 @@ export default {
             title: 'SEO Description',
             type: 'string',
             description: 'Description для соц. сетей',
-            groups: 'seo',
             //validation: Rule => Rule.required(),
         },
         //Content
@@ -50,7 +36,6 @@ export default {
             title: 'Title',
             type: 'internationalizedArrayString',
             description: 'Заголовок',
-            groups: 'content',
             //validation: Rule => Rule.required(),
         },
         {
@@ -58,7 +43,6 @@ export default {
             title: 'Subtitle',
             type: 'internationalizedArrayString',
             description: 'Подзаголовок',
-            groups: 'content',
             //validation: Rule => Rule.required(),
         },
         {
@@ -66,7 +50,6 @@ export default {
             title: 'Background Color',
             type: 'color',
             description: 'Цвет фона',
-            groups: 'content',
         },
         {
             name: 'bgImage',
@@ -85,14 +68,12 @@ export default {
                     //validation: Rule => Rule.required(),
                 }
             ],
-            groups: 'content',
         },
         {
             name: 'callToAction',
             title: 'Call to Action',
             type: 'internationalizedArrayString',
             description: 'Кнопка',
-            groups: 'content',
             //validation: Rule => Rule.required(),
         }
     ],

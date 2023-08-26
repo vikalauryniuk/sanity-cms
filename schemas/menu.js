@@ -30,11 +30,5 @@ export default {
                         .slice(0, 200)
             },
         },
-        {
-            name: 'bg',
-            title: 'Background Color',
-            type: 'color',
-            description: 'Цвет фона',
-        },
     ]
 }
