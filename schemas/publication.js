@@ -1,4 +1,4 @@
-import {FcPhone} from 'react-icons/fc'
+import {FcReading} from 'react-icons/fc'
 const textEditorStyles = [
     { title: 'Paragraph', value: 'normal' },
     { title: 'Heading 1', value: 'h1' },
@@ -7,29 +7,22 @@ const textEditorStyles = [
     { title: 'Bullet', value: 'bullet' },
     { title: 'Numbered', value: 'number' },
     { title: 'Quote', value: 'blockquote' },
-    { title: 'Link', value: 'link' },
 ];
 export default {
-    name: 'contact',
-    title: 'Contact',
+    name: 'publication',
+    title: 'Publication',
     type: 'document',
-    icon: FcPhone,
+    icon: FcReading,
     fields: [
         {
-            name: 'name',
-            title: 'Name',
+            name: 'publication',
+            title: 'Publication',
             type: 'string',
         },
         {
             name: 'title',
             title: 'Title',
-            type: 'internationalizedArrayString',
-            validation: Rule => Rule.required(),
-        },
-        {
-            name: 'subtitle',
-            title: 'Subtitle',
-            type: 'internationalizedArrayString',
+            type: 'string',
             validation: Rule => Rule.required(),
         },
         {
@@ -65,6 +58,12 @@ export default {
             validation: Rule => Rule.required(),
         },
         {
+            name: 'author',
+            title: 'Author',
+            type: 'internationalizedArrayString',
+            validation: Rule => Rule.required(),
+        },
+        {
             name: 'image',
             title: 'Image',
             type: 'image',
@@ -83,10 +82,16 @@ export default {
             validation: Rule => Rule.required(),
         },
         {
+            name: 'link',
+            title: 'Link',
+            type: 'string',
+            validation: Rule => Rule.required(),
+        },
+        
+        {
             name: 'button',
             title: 'Button',
             type: 'internationalizedArrayString',
-            description: 'Кнопка Send',
             validation: Rule => Rule.required(),
         }
     ]
