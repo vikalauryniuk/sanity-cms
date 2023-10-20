@@ -24,7 +24,6 @@ export default {
             name: 'seoImage',
             title: 'SEO Image',
             type: 'image',
-            description: 'Изображение для соц. сетей',
             options: {
                 hotspot: true,
             },
@@ -47,7 +46,6 @@ export default {
             name: 'seoDescription',
             title: 'SEO Description',
             type: 'object',
-            description: 'Description для соц. сетей',
             fields: [
                 {
                     title: 'English',
@@ -140,6 +138,7 @@ export default {
                 slugify: input => input
                 .toLowerCase()
                 .replace(/\s+/g, '-')
+                // eslint-disable-next-line no-useless-escape
                 .replace(/[^\w\-]+/g, '-')
                 .slice(0, 200)
               },
